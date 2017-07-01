@@ -6,6 +6,7 @@ module.exports = function(source) {
 
 		html = html.replace(/\r|\n/g, '');
 		html = html.replace(/("|')/g, '\\$1');
+		html = html.replace(/\s+/gm,' ');
 
 	return exports + '"' + html + '"';
 };

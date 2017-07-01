@@ -74,3 +74,34 @@ var json = JSON.parse(str);
 
 console.log(json);  //json: [{"text": "first","value": "first"},{"text": "second","value": "second"}]
 ```
+
+
+
+### Example 3: multiple string template
+
+template.html
+``` html
+<string2-template id="template_approot">
+    <div class="app-root">
+        <app-header />
+        <router-view/>
+    </div>
+</string2-template>
+<string2-template id="template_header">
+
+    <div class="app-header">
+        header
+    </div>
+
+</string2-template>
+```
+
+index.js
+``` javascript
+import {template_approot,template_header} from './template.html';
+
+console.log(template_approot);
+//<div class="app-root"> <app-header /> <router-view/> </div>
+console.log(template_header);
+//<div class="app-header"> header </div>
+```

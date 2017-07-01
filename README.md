@@ -4,20 +4,20 @@ webpack loader: resource file transform to string
 
 ## Installation
 
-`npm install string-loader --save-dev`
+`npm install string2-loader --save-dev`
 
 ## Usage
 
 ### webpack.config setting
 ``` javascript
-loaders: [ { test: /\.[name]$/, loader: "string" } ]
+loaders: [ { test: /\.[name]$/, loader: "string2" } ]
 ```
 
 ## Example 1: html transform to string template
 
  webpack.config
 ``` javascript
-loaders: [ { test: /\.html$/, loader: "string" } ]
+loaders: [ { test: /\.html$/, loader: "string2" } ]
 ```
 
 list.tpl.html
@@ -49,7 +49,7 @@ console.log(html);  //html: '<ul><li>option1</li><li>option2</li></ul>'
 
 webpack.config
 ``` javascript
-loaders: [ { test: /\.html|\.json$/, loader: "string" } ]
+loaders: [ { test: /\.html|\.json$/, loader: "string2" } ]
 ```
 
 data.json
@@ -77,7 +77,14 @@ console.log(json);  //json: [{"text": "first","value": "first"},{"text": "second
 
 
 
+
 ### Example 3: multiple string template
+
+
+webpack.config
+``` javascript
+loaders: [ { test: /\.html$/, loader: "string2" } ]
+```
 
 template.html
 ``` html

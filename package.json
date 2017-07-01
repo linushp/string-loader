@@ -1,5 +1,5 @@
 {
-  "name": "string-loader",
+  "name": "string2-loader",
   "version": "0.0.1",
   "description": "string loader for webpack",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enmoon/string-loader.git"
+    "url": "git+https://github.com/luanhaipeng/string-loader"
   },
   "devDependencies": {
     /*"webpack": "^1.13.0"*/
@@ -20,10 +20,10 @@
     "webpack",
     "toString"
   ],
-  "author": "enmoon",
+  "author": "enmoon,luanhaipeng",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/enmoon/string-loader/issues"
+    "url": "https://github.com/luanhaipeng/string-loader/issues"
   },
-  "homepage": "https://github.com/enmoon/string-loader#readme"
+  "homepage": "https://github.com/luanhaipeng/string-loader#readme"
 }

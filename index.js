@@ -89,7 +89,25 @@ function exportMultiTempalte(html) {
 }
 
 
+function keepFormatLoader(source) {
+        var html = source,
+            exports = 'module.exports = ';
+
+        html = html.replace(/\r/g, '\\r');
+        html = html.replace(/\n/g, '\\n');
+        html = html.replace(/("|')/g, '\\$1');
+
+        return exports + '"' + html + '"';
+}
+
 module.exports = function (source) {
+
+    if(source.startsWith("//string2-loader:keepFormat")){
+        return keepFormatLoader(source);
+    }
+
+
+
     var html = source;
     var exports = 'module.exports = ';
 

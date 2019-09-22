@@ -102,7 +102,10 @@ function keepFormatLoader(source) {
 
 module.exports = function (source) {
 
-    if(source.startsWith("//string2-loader:keepFormat")){
+    //第一行如果是keepformat
+    var lines = source.trim().split('\n');
+    var line0 = (lines[0] || '').toLowerCase();
+    if (line0.indexOf('string2-loader:keepformat') >= 0) {
         return keepFormatLoader(source);
     }
 
